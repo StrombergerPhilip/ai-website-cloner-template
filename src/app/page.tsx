@@ -1,9 +1,13 @@
+import { HeroSection } from "@/components/hero-section";
+import { SiteNav } from "@/components/site-nav";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
+    <>
+      <SiteNav />
+      <main className="flex-1">
+        <HeroSection />
+      </main>
+    </>
   );
 }
