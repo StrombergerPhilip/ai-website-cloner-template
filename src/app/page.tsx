@@ -15,7 +15,7 @@ export default function Home() {
           versions require local browser-MCP extraction.
         </p>
       </div>
-      <div className="grid w-full max-w-2xl gap-4 sm:grid-cols-2">
+      <div className="grid w-full max-w-3xl gap-4 sm:grid-cols-3">
         <Link
           href="/parivie"
           className="group rounded-2xl border border-border bg-[oklch(0.94_0.04_350)] p-8 text-left transition hover:border-[oklch(0.61_0.235_350)] hover:shadow-md"
@@ -36,6 +36,17 @@ export default function Home() {
           </p>
           <p className="mt-2 text-sm text-[oklch(0.55_0_0)]">
             apple.com/at — product tile grid.
+          </p>
+        </Link>
+        <Link
+          href="/foxora"
+          className="group rounded-2xl border border-[#1f2535] bg-[#10141f] p-8 text-left transition hover:border-[#f7931a] hover:shadow-md"
+        >
+          <p className="text-2xl font-bold tracking-tight text-[#eef1f6]">
+            🦊 Fox<span className="text-[#f7931a]">ora</span>
+          </p>
+          <p className="mt-2 text-sm text-[#b6bcc9]">
+            Bitcoin-Rewards strategy brief — dark, orange.
           </p>
         </Link>
       </div>

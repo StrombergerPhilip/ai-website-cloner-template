@@ -110,6 +110,71 @@
   --radius: 1.125rem;
 }
 
+.theme-foxora {
+  /* surfaces */
+  --foxora-bg: #07090f;
+  --foxora-bg2: #0b0e17;
+  --foxora-card: #10141f;
+  --foxora-card2: #161b29;
+  --foxora-card3: #1c2235;
+  --foxora-border: #1f2535;
+  --foxora-borderW: #2a3148;
+  /* brand */
+  --foxora-fox: #f7931a;
+  --foxora-fox-bright: #ffa836;
+  --foxora-fox-dim: rgba(247, 147, 26, 0.1);
+  --foxora-fox-edge: rgba(247, 147, 26, 0.32);
+  /* text */
+  --foxora-text: #eef1f6;
+  --foxora-text2: #b6bcc9;
+  --foxora-muted: #6b7388;
+  /* status */
+  --foxora-green: #1d9e75;
+  --foxora-red: #e24b4a;
+  --foxora-amber: #f0b033;
+  /* fonts */
+  --foxora-display: var(--font-unbounded);
+  --foxora-body: var(--font-dmsans);
+  --foxora-mono: var(--font-jetmono);
+
+  /* shadcn token overrides for compatibility inside the route */
+  --background: var(--foxora-bg);
+  --foreground: var(--foxora-text);
+  --primary: var(--foxora-fox);
+  --primary-foreground: #1a1108;
+  --muted: var(--foxora-card2);
+  --muted-foreground: var(--foxora-muted);
+  --border: var(--foxora-border);
+  --ring: var(--foxora-fox);
+  --radius: 0.875rem;
+  font-family: var(--foxora-body), system-ui, sans-serif;
+}
+
+.theme-foxora .foxora-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  z-index: 0;
+}
+
+.theme-foxora .foxora-bg {
+  background:
+    radial-gradient(1100px 600px at 85% -8%, rgba(247, 147, 26, 0.1), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(247, 147, 26, 0.05), transparent 55%),
+    var(--foxora-bg);
+}
+
+@keyframes foxora-fu {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.theme-foxora .foxora-fu {
+  animation: foxora-fu 0.6s ease both;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
