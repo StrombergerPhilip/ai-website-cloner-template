@@ -32,5 +32,14 @@ jobs:
       - name: Type check
         run: npm run typecheck
 
+      - name: Test
+        run: npm test
+
       - name: Build
         run: npm run build
+
+      - name: Verify generated files are up to date
+        run: |
+          bash scripts/sync-agent-rules.sh
+          node scripts/sync-skills.mjs
+          git diff --exit-code
