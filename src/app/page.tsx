@@ -15,7 +15,7 @@ export default function Home() {
           versions require local browser-MCP extraction.
         </p>
       </div>
-      <div className="grid w-full max-w-3xl gap-4 sm:grid-cols-3">
+      <div className="grid w-full max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Link
           href="/parivie"
           className="group rounded-2xl border border-border bg-[oklch(0.94_0.04_350)] p-8 text-left transition hover:border-[oklch(0.61_0.235_350)] hover:shadow-md"
@@ -47,6 +47,17 @@ export default function Home() {
           </p>
           <p className="mt-2 text-sm text-[#b6bcc9]">
             Bitcoin-Rewards strategy brief — dark, orange.
+          </p>
+        </Link>
+        <Link
+          href="/foxora-app"
+          className="group rounded-2xl border border-[#2A2620] bg-[#1A1814] p-8 text-left transition hover:border-[#FF6B1A] hover:shadow-md"
+        >
+          <p className="text-2xl font-black tracking-tight text-[#FFF8F0]">
+            FOX<span className="text-[#FF6B1A]">ORA</span>
+          </p>
+          <p className="mt-2 text-sm text-[#A39B8E]">
+            Marketing landing — hero, calculator, AI chat, FAQ.
           </p>
         </Link>
       </div>
