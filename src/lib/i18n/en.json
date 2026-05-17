@@ -1,0 +1,292 @@
+{
+  "nav": {
+    "modell": "Model",
+    "struktur": "Structure",
+    "roadmap": "Roadmap",
+    "kontakt": "Contact",
+    "talkToFoxora": "Talk to Foxora",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Toggle theme",
+    "toggleLang": "Toggle language"
+  },
+  "common": {
+    "comingSoon": "Coming soon",
+    "back": "Back",
+    "more": "Learn more",
+    "sendMessage": "Send message",
+    "thinking": "Foxora is thinking…",
+    "you": "You",
+    "foxora": "Foxora",
+    "send": "Send",
+    "askPlaceholder": "Ask Foxora — e.g. \"How does the cap work?\"",
+    "explain": "Have the model explained"
+  },
+  "home": {
+    "kicker": "Start Kit · v2.0 · AT GmbH × Dubai FZE",
+    "title": "Foxora Start.\nThe next 180 days.",
+    "lead": "A premium loyalty program with a hard 100% cap. No yields, no pyramid — a clean dual structure between Klagenfurt and Dubai, built for the next 180 days.",
+    "ctaPrimary": "See the model",
+    "ctaSecondary": "Talk to Foxora",
+    "pillarsKicker": "What makes Foxora different",
+    "pillarsTitle": "Three pillars. One idea.",
+    "pillars": [
+      {
+        "title": "Premium activation",
+        "body": "One-time €250. Like a Costco membership — you're a member, not a speculator."
+      },
+      {
+        "title": "100% cap. Period.",
+        "body": "Cashback up to your own activation. Then it ends. Clean math."
+      },
+      {
+        "title": "Global structure",
+        "body": "Brand and IP in Austria. App operations in Dubai. Cleanly separated, by design."
+      }
+    ],
+    "miniCalcKicker": "Run the numbers",
+    "miniCalcTitle": "How fast does my cap fill?",
+    "miniCalcLead": "Quick simulation here — full calculator on the model page.",
+    "miniCalcCta": "Full calculator",
+    "trustKicker": "Trust strip",
+    "trustTitle": "Clean structures, documented.",
+    "trustItems": [
+      "Foxora GmbH · Klagenfurt",
+      "Foxora FZ-LLC · Dubai",
+      "GDPR + UAE Corporate Tax",
+      "IP license documented"
+    ],
+    "closingTitle": "Ready for the next 180 days?",
+    "closingLead": "Look at the model, ask questions, or write us directly.",
+    "closingCta": "See the model"
+  },
+  "modell": {
+    "kicker": "Model",
+    "title": "Cashback with a hard cap.\nBuilt for clarity.",
+    "lead": "Foxora is a premium loyalty program. Members pay a one-time €250, get cashback up to their own activation — then it ends. No extension, no pyramid.",
+    "stepsTitle": "How it works",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Activate",
+        "body": "Pay €250 once and become a member. Premium terms at all partners immediately."
+      },
+      {
+        "step": "02",
+        "title": "Use",
+        "body": "Shop at partners or take their services. Cashback flows back automatically."
+      },
+      {
+        "step": "03",
+        "title": "Hit the cap",
+        "body": "Once cumulative payout reaches €250, cashback ends. Membership stays, benefits stay."
+      }
+    ],
+    "tabsTitle": "Three funding streams",
+    "tabs": {
+      "premium": {
+        "label": "Premium cashback",
+        "title": "Membership volume",
+        "body": "Activations fund the cashback engine itself. The hard cap guarantees that payout per member can never exceed their own deposit — the model is mathematically closed."
+      },
+      "saas": {
+        "label": "SaaS funding",
+        "title": "B2B tools for partners",
+        "body": "Partner companies pay for backend tools (dashboards, API, anti-fraud). Steady MRR stream, independent of the activation funnel."
+      },
+      "btc": {
+        "label": "BTC swap",
+        "title": "Treasury hedge",
+        "body": "Part of treasury is hedged via BTC swaps against inflation and currency swings. This is treasury of the GmbH / FZ-LLC — not speculation on customer money."
+      }
+    },
+    "calcTitle": "Cashback calculator",
+    "calcLead": "Play with the numbers. Then let Foxora explain the result.",
+    "calcInputs": {
+      "activation": "Activation (€)",
+      "monthlySpend": "Monthly partner spend (€)",
+      "rate": "Cashback rate (%)",
+      "cap": "Cap (% of activation)",
+      "compute": "Compute",
+      "reset": "Reset",
+      "explain": "Have the model explained",
+      "loading": "Foxora is writing…"
+    },
+    "calcResult": {
+      "monthsLabel": "Months until cap",
+      "totalLabel": "Total cashback",
+      "ratePerMonth": "Per month",
+      "capValue": "Cap value",
+      "tableMonth": "Month",
+      "tableEarned": "This month",
+      "tableTotal": "Cumulative",
+      "tablePct": "% of cap",
+      "capReached": "Cap reached",
+      "explanationTitle": "Foxora's explanation"
+    },
+    "faqTitle": "Frequently asked",
+    "faq": [
+      {
+        "q": "Is this an investment?",
+        "a": "No. Foxora is a premium loyalty program — comparable to a Costco membership. You pay for benefits, not yield."
+      },
+      {
+        "q": "When does cashback end?",
+        "a": "When your cumulative payout reaches 100% of your activation. Period. Membership stays, but there are no further cashback payouts."
+      },
+      {
+        "q": "Is crypto involved?",
+        "a": "Only as a treasury hedge of the companies. Customers pay, hold, and receive in EUR only. No token, no crypto investment."
+      },
+      {
+        "q": "Why Austria and Dubai?",
+        "a": "Klagenfurt / Vienna holds brand, IP, and DACH compliance. Dubai operates the global app. Clean split, documented IP license."
+      }
+    ]
+  },
+  "struktur": {
+    "kicker": "Structure",
+    "title": "AT GmbH × Dubai FZ-LLC",
+    "lead": "Two entities, one mission. Brand and IP in Austria. App operations and global scale in Dubai. Connected via a cleanly documented IP license.",
+    "atTitle": "Foxora GmbH",
+    "atLocation": "Klagenfurt / Vienna · Austria",
+    "atBullets": [
+      "Brand rights and IP",
+      "DACH sales and PR",
+      "EU compliance, GDPR",
+      "AT statutory accounts"
+    ],
+    "dubaiTitle": "Foxora FZ-LLC",
+    "dubaiLocation": "DMCC or IFZA · Dubai, UAE",
+    "dubaiBullets": [
+      "Global app operations",
+      "International sales",
+      "Treasury and BTC swap",
+      "UAE Corporate Tax compliant"
+    ],
+    "flowTitle": "IP flow and service fee",
+    "flowBody": "The AT GmbH licenses the brand and software IP to the Dubai FZ-LLC. In return, an arm's length royalty / service fee flows back — documented, auditable, transfer-pricing-aligned.",
+    "complianceTitle": "Compliance at a glance",
+    "complianceItems": [
+      {
+        "title": "GDPR",
+        "body": "Data processing in EU cloud, DPAs with every partner."
+      },
+      {
+        "title": "AT statutory accounts",
+        "body": "Annual report under UGB, tax advisor in Klagenfurt, FinanzOnline filings."
+      },
+      {
+        "title": "UAE Corporate Tax",
+        "body": "9% corporate tax above AED 375,000. Clean quarterly bookkeeping in Dubai."
+      },
+      {
+        "title": "Not a regulated financial product",
+        "body": "Premium loyalty is not an FMA / BaFin regulated product. Activations are booked as membership revenue."
+      }
+    ]
+  },
+  "roadmap": {
+    "kicker": "Roadmap",
+    "title": "The next 180 days.",
+    "lead": "Four phases of 45 days each. Concrete goals, measurable deliverables, clear ownership.",
+    "phases": [
+      {
+        "label": "Phase 1 · Day 1–45",
+        "title": "Setup",
+        "goals": [
+          "Incorporate Foxora GmbH (Klagenfurt)",
+          "Register Foxora FZ-LLC in DMCC or IFZA",
+          "Activate bank accounts AT + UAE",
+          "Sign IP license agreement AT → Dubai",
+          "MVP app: cashback engine + member onboarding",
+          "First 5 partner LOIs"
+        ]
+      },
+      {
+        "label": "Phase 2 · Day 46–90",
+        "title": "Soft launch",
+        "goals": [
+          "Onboard 100 beta members",
+          "Cashback engine in production",
+          "First 20 active partners",
+          "GDPR compliance audit",
+          "Brand refresh, publish Foxora manifest"
+        ]
+      },
+      {
+        "label": "Phase 3 · Day 91–135",
+        "title": "Scale",
+        "goals": [
+          "1,000 paying members",
+          "Performance marketing AT/DE/CH",
+          "SaaS module for partners live",
+          "EU-wide international expansion",
+          "Treasury strategy with BTC hedge implemented"
+        ]
+      },
+      {
+        "label": "Phase 4 · Day 136–180",
+        "title": "Consolidation",
+        "goals": [
+          "Audit trail of all cashback flows",
+          "KPI dashboard for stakeholders",
+          "First cap completions cleanly settled",
+          "Series-ready: pitch deck, data room, cap table",
+          "Publish 180-day report"
+        ]
+      }
+    ]
+  },
+  "kontakt": {
+    "kicker": "Contact",
+    "title": "Write to us.",
+    "lead": "Member, partner, press, or investor — we respond within 48 hours.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "topic": "Topic",
+      "message": "Message",
+      "topics": {
+        "general": "General",
+        "partner": "Become a partner",
+        "press": "Press",
+        "investor": "Investor"
+      },
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks. Foxora gets back to you within 48 hours.",
+      "error": "Something went wrong. Please try again later."
+    },
+    "addressesTitle": "Addresses",
+    "addresses": [
+      {
+        "label": "Foxora GmbH",
+        "lines": ["Klagenfurt / Vienna", "Austria"]
+      },
+      {
+        "label": "Foxora FZ-LLC",
+        "lines": ["DMCC / IFZA", "Dubai, UAE"]
+      }
+    ],
+    "emailLabel": "Direct line",
+    "email": "hello@foxora.io"
+  },
+  "chat": {
+    "title": "Talk to Foxora",
+    "subtitle": "Ask anything about the model, structure, or cashback cap.",
+    "starters": [
+      "What is Foxora in one sentence?",
+      "How does the 100% cap work?",
+      "Why AT GmbH × Dubai FZE?",
+      "Is this an investment?"
+    ],
+    "disclaimer": "Answers are AI-generated. Binding statements live in the official documents."
+  },
+  "footer": {
+    "tagline": "Premium loyalty with a hard cap. Cleanly built.",
+    "legal": "© 2026 Foxora GmbH · Klagenfurt + Foxora FZ-LLC · Dubai",
+    "impressum": "Imprint",
+    "datenschutz": "Privacy"
+  }
+}

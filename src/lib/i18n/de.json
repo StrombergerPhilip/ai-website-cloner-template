@@ -1,0 +1,292 @@
+{
+  "nav": {
+    "modell": "Modell",
+    "struktur": "Struktur",
+    "roadmap": "Roadmap",
+    "kontakt": "Kontakt",
+    "talkToFoxora": "Mit Foxora reden",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "toggleTheme": "Theme wechseln",
+    "toggleLang": "Sprache wechseln"
+  },
+  "common": {
+    "comingSoon": "In Kürze",
+    "back": "Zurück",
+    "more": "Mehr erfahren",
+    "sendMessage": "Nachricht senden",
+    "thinking": "Foxora denkt nach …",
+    "you": "Du",
+    "foxora": "Foxora",
+    "send": "Senden",
+    "askPlaceholder": "Frag Foxora — z. B. „Wie funktioniert der Cap?\"",
+    "explain": "Modell erklären lassen"
+  },
+  "home": {
+    "kicker": "Start Kit · v2.0 · AT GmbH × Dubai FZE",
+    "title": "Foxora Start.\nDie nächsten 180 Tage.",
+    "lead": "Ein Premium-Loyalty-Programm mit hartem 100 %-Cap. Keine Renditen, keine Pyramide — sondern eine saubere Doppelstruktur in Klagenfurt und Dubai, gebaut für die nächsten 180 Tage.",
+    "ctaPrimary": "Modell ansehen",
+    "ctaSecondary": "Mit Foxora reden",
+    "pillarsKicker": "Was Foxora anders macht",
+    "pillarsTitle": "Drei Säulen. Eine Idee.",
+    "pillars": [
+      {
+        "title": "Premium-Aktivierung",
+        "body": "Einmalig €250. Wie eine Costco-Membership — Mitglied sein, nicht spekulieren."
+      },
+      {
+        "title": "100 % Cap. Punkt.",
+        "body": "Cashback bis maximal zur eigenen Aktivierung. Dann endet es. Saubere Mathematik."
+      },
+      {
+        "title": "Globale Struktur",
+        "body": "Marke und IP in Österreich. App-Operations in Dubai. Beides legal sauber getrennt."
+      }
+    ],
+    "miniCalcKicker": "Vorab rechnen",
+    "miniCalcTitle": "Wie schnell ist mein Cap erreicht?",
+    "miniCalcLead": "Mit einem Klick simulieren — voller Rechner auf der Modell-Seite.",
+    "miniCalcCta": "Voller Rechner",
+    "trustKicker": "Trust-Strip",
+    "trustTitle": "Saubere Strukturen, dokumentiert.",
+    "trustItems": [
+      "Foxora GmbH · Klagenfurt",
+      "Foxora FZ-LLC · Dubai",
+      "DSGVO + UAE Corporate Tax",
+      "IP-Lizenz dokumentiert"
+    ],
+    "closingTitle": "Bereit für die nächsten 180 Tage?",
+    "closingLead": "Sieh dir das Modell an, stell Fragen oder schreib uns direkt.",
+    "closingCta": "Zum Modell"
+  },
+  "modell": {
+    "kicker": "Modell",
+    "title": "Cashback mit hartem Cap.\nGebaut für Klarheit.",
+    "lead": "Foxora ist ein Premium-Loyalty-Programm. Mitglieder zahlen einmalig €250, bekommen Cashback bis maximal zur eigenen Aktivierung — und dann endet es. Keine Verlängerung, keine Pyramide.",
+    "stepsTitle": "So funktioniert es",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Aktivieren",
+        "body": "Einmal €250 zahlen und Mitglied werden. Sofort Premium-Konditionen bei allen Partnern."
+      },
+      {
+        "step": "02",
+        "title": "Nutzen",
+        "body": "Bei Partnern einkaufen oder Services beziehen. Cashback fließt automatisch zurück."
+      },
+      {
+        "step": "03",
+        "title": "Cap erreichen",
+        "body": "Sobald die kumulierte Auszahlung €250 erreicht hat, endet das Cashback. Membership bleibt, Vorteile bleiben."
+      }
+    ],
+    "tabsTitle": "Drei Funding-Streams",
+    "tabs": {
+      "premium": {
+        "label": "Premium-Cashback",
+        "title": "Membership-Volumen",
+        "body": "Aktivierungen finanzieren die Cashback-Engine selbst. Der harte Cap garantiert, dass die Ausschüttung pro Mitglied nie höher sein kann als die eigene Einzahlung — das Modell ist mathematisch geschlossen."
+      },
+      "saas": {
+        "label": "SaaS-Funding",
+        "title": "B2B-Tools für Partner",
+        "body": "Partner-Unternehmen zahlen für Backend-Tools (Dashboards, API, Anti-Fraud). Stetiger MRR-Strom, unabhängig vom Aktivierungs-Funnel."
+      },
+      "btc": {
+        "label": "BTC-Swap",
+        "title": "Treasury-Hedge",
+        "body": "Ein Teil der Treasury wird über BTC-Swaps gegen Inflation und Währungs-Schwankungen abgesichert. Das ist Treasury der GmbH/FZ-LLC — keine Spekulation auf Kunden-Geld."
+      }
+    },
+    "calcTitle": "Cashback-Rechner",
+    "calcLead": "Spiel die Zahlen durch. Lass Foxora das Ergebnis erklären.",
+    "calcInputs": {
+      "activation": "Aktivierung (€)",
+      "monthlySpend": "Monatlicher Spend bei Partnern (€)",
+      "rate": "Cashback-Rate (%)",
+      "cap": "Cap (% der Aktivierung)",
+      "compute": "Berechnen",
+      "reset": "Zurücksetzen",
+      "explain": "Modell erklären lassen",
+      "loading": "Foxora schreibt …"
+    },
+    "calcResult": {
+      "monthsLabel": "Monate bis Cap erreicht",
+      "totalLabel": "Gesamt-Cashback",
+      "ratePerMonth": "Pro Monat",
+      "capValue": "Cap-Wert",
+      "tableMonth": "Monat",
+      "tableEarned": "Diesen Monat",
+      "tableTotal": "Kumuliert",
+      "tablePct": "% des Caps",
+      "capReached": "Cap erreicht",
+      "explanationTitle": "Foxoras Erklärung"
+    },
+    "faqTitle": "Häufige Fragen",
+    "faq": [
+      {
+        "q": "Ist das ein Investment?",
+        "a": "Nein. Foxora ist ein Premium-Loyalty-Programm — vergleichbar mit einer Costco-Membership. Du zahlst für Vorteile, nicht für Rendite."
+      },
+      {
+        "q": "Wann endet das Cashback?",
+        "a": "Sobald deine kumulierte Auszahlung 100 % deiner Aktivierung erreicht hat. Punkt. Die Membership bleibt, aber es gibt keine weiteren Cashback-Auszahlungen."
+      },
+      {
+        "q": "Ist Crypto involviert?",
+        "a": "Nur als Treasury-Hedge der Gesellschaften. Kunden zahlen, halten und bekommen ausschließlich in EUR. Kein Token, kein Crypto-Investment."
+      },
+      {
+        "q": "Warum Österreich und Dubai?",
+        "a": "Klagenfurt / Wien hält die Marke, IP und DACH-Compliance. Dubai operates die globale App. Saubere Trennung, dokumentierte IP-Lizenz."
+      }
+    ]
+  },
+  "struktur": {
+    "kicker": "Struktur",
+    "title": "AT GmbH × Dubai FZ-LLC",
+    "lead": "Zwei Entitäten, eine Mission. Marke und IP in Österreich. App-Operations und globale Skalierung in Dubai. Verbunden durch eine sauber dokumentierte IP-Lizenz.",
+    "atTitle": "Foxora GmbH",
+    "atLocation": "Klagenfurt / Wien · Österreich",
+    "atBullets": [
+      "Markenrechte und IP",
+      "DACH-Vertrieb und PR",
+      "EU-Compliance, DSGVO",
+      "AT-Bilanz und Steuer"
+    ],
+    "dubaiTitle": "Foxora FZ-LLC",
+    "dubaiLocation": "DMCC oder IFZA · Dubai, UAE",
+    "dubaiBullets": [
+      "App-Operations weltweit",
+      "Internationaler Vertrieb",
+      "Treasury und BTC-Swap",
+      "UAE Corporate Tax konform"
+    ],
+    "flowTitle": "IP-Fluss und Service-Fee",
+    "flowBody": "Die AT GmbH lizenziert Marke und Software-IP an die Dubai FZ-LLC. Im Gegenzug fließt eine marktübliche Royalty / Service-Fee zurück — dokumentiert, prüfbar, fremdvergleichskonform.",
+    "complianceTitle": "Compliance auf einen Blick",
+    "complianceItems": [
+      {
+        "title": "DSGVO",
+        "body": "Datenverarbeitung in EU-Cloud, Auftragsverarbeitungs-Verträge mit allen Partnern."
+      },
+      {
+        "title": "AT-Bilanzpflicht",
+        "body": "Jahresabschluss nach UGB, Steuerberater in Klagenfurt, FinanzOnline."
+      },
+      {
+        "title": "UAE Corporate Tax",
+        "body": "9 % Corporate Tax über AED 375.000. Saubere Quartalsbuchhaltung in Dubai."
+      },
+      {
+        "title": "Kein konzessions­pflichtiges Finanzprodukt",
+        "body": "Premium-Loyalty ist kein FMA-/BaFin-pflichtiges Produkt. Aktivierungen werden buchhalterisch als Membership-Vereinnahmungen erfasst."
+      }
+    ]
+  },
+  "roadmap": {
+    "kicker": "Roadmap",
+    "title": "Die nächsten 180 Tage.",
+    "lead": "Vier Phasen à 45 Tage. Konkrete Ziele, messbare Deliverables, klare Verantwortlichkeiten.",
+    "phases": [
+      {
+        "label": "Phase 1 · Tag 1–45",
+        "title": "Setup",
+        "goals": [
+          "Foxora GmbH gründen (Klagenfurt)",
+          "Foxora FZ-LLC in DMCC oder IFZA registrieren",
+          "Bankkonten AT + UAE aktivieren",
+          "IP-Lizenz-Vertrag AT → Dubai unterzeichnen",
+          "MVP-App: Cashback-Engine + Membership-Onboarding",
+          "Erste 5 Partner-LOIs"
+        ]
+      },
+      {
+        "label": "Phase 2 · Tag 46–90",
+        "title": "Soft Launch",
+        "goals": [
+          "100 Beta-Mitglieder onboarden",
+          "Cashback-Engine produktiv schalten",
+          "Erste 20 aktive Partner",
+          "Compliance-Audit DSGVO",
+          "Brand-Refresh, Foxora-Manifest publizieren"
+        ]
+      },
+      {
+        "label": "Phase 3 · Tag 91–135",
+        "title": "Scale",
+        "goals": [
+          "1.000 zahlende Mitglieder",
+          "Performance-Marketing AT/DE/CH",
+          "SaaS-Modul für Partner live",
+          "Internationale Expansion (EU-weit)",
+          "Treasury-Strategie mit BTC-Hedge umgesetzt"
+        ]
+      },
+      {
+        "label": "Phase 4 · Tag 136–180",
+        "title": "Konsolidierung",
+        "goals": [
+          "Audit-Trail aller Cashback-Flows",
+          "KPI-Dashboard für Stakeholder",
+          "Erste Cap-Erreichungen sauber abgewickelt",
+          "Series-Ready: Pitch-Deck, Data-Room, Cap-Table",
+          "180-Tage-Report veröffentlichen"
+        ]
+      }
+    ]
+  },
+  "kontakt": {
+    "kicker": "Kontakt",
+    "title": "Schreib uns.",
+    "lead": "Egal ob Mitglied, Partner, Presse oder Investor — wir antworten innerhalb von 48 Stunden.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "topic": "Thema",
+      "message": "Nachricht",
+      "topics": {
+        "general": "Allgemein",
+        "partner": "Partner werden",
+        "press": "Presse",
+        "investor": "Investor"
+      },
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet …",
+      "success": "Danke. Foxora meldet sich innerhalb von 48 Stunden.",
+      "error": "Etwas ist schiefgelaufen. Bitte später erneut versuchen."
+    },
+    "addressesTitle": "Adressen",
+    "addresses": [
+      {
+        "label": "Foxora GmbH",
+        "lines": ["Klagenfurt / Wien", "Österreich"]
+      },
+      {
+        "label": "Foxora FZ-LLC",
+        "lines": ["DMCC / IFZA", "Dubai, UAE"]
+      }
+    ],
+    "emailLabel": "Direkter Draht",
+    "email": "hello@foxora.io"
+  },
+  "chat": {
+    "title": "Mit Foxora reden",
+    "subtitle": "Frag alles zum Modell, der Struktur oder dem Cashback-Cap.",
+    "starters": [
+      "Was ist Foxora in einem Satz?",
+      "Wie funktioniert der 100 %-Cap?",
+      "Warum AT GmbH × Dubai FZE?",
+      "Ist das ein Investment?"
+    ],
+    "disclaimer": "Antworten sind KI-generiert. Verbindliche Aussagen findest du in den offiziellen Dokumenten."
+  },
+  "footer": {
+    "tagline": "Premium-Loyalty mit hartem Cap. Sauber gebaut.",
+    "legal": "© 2026 Foxora GmbH · Klagenfurt + Foxora FZ-LLC · Dubai",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz"
+  }
+}
