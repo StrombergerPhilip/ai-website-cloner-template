@@ -1,4 +1,4 @@
-# Behaviors — apple.com (above-the-fold clone)
+# Behaviors — amazon.com (above-the-fold clone)
 
 ## Caveat
 
@@ -6,22 +6,25 @@
 
 ## Implemented behaviors
 
-### Nav
-- **Hover on link/icon:** opacity 0.8 → 1.0, transition 200ms.
-- **Sticky:** `position: sticky; top: 0` — nav stays pinned as the page scrolls.
-- **Backdrop blur:** `backdrop-filter: blur(20px) saturate(180%)` on translucent black fill — produces frosted-glass effect over content scrolled underneath.
-- **Responsive:** at viewport widths < `md` (~768px), the centered link list collapses (`hidden md:flex`). No replacement hamburger menu is implemented in this scaffold.
+### Header (top bar + sub-nav)
+- **Hover on clusters:** every clickable cluster (logo, location, language, account, returns, cart, sub-nav links) gains a 1px white border on hover. Amazon's signature visual cue. No transition timing — instant border swap.
+- **Sticky:** `position: sticky; top: 0` keeps both rows pinned as the page scrolls.
+- **Search button hover:** background steps from `--cta` (warm yellow) to `--cta-hover` (darker amber).
+- **Responsive collapse:** at narrow widths the deliver-to selector, language picker, account dropdown, and returns link drop out progressively via `hidden md:flex` / `hidden lg:flex` so the search bar always stays visible.
+- **Sub-nav overflow:** horizontal scroll (`overflow-x-auto`) on narrow viewports — links remain reachable.
 
-### Hero
-- **Static layout** — no scroll-triggered or time-driven changes.
-- **Primary CTA hover:** background color steps darker on hover.
-- **Secondary CTA hover:** underline on hover.
+### Hero banner
+- **Static layout** — no carousel rotation, no scroll triggers.
+- **CTA hover:** background `--cta` → `--cta-hover`.
+- **Bottom fade:** linear gradient from transparent to `--background` over the bottom 96px — softens the transition into below-the-fold content.
 
 ## Behaviors NOT implemented (would require live extraction)
 
-- Apple's real nav has a hover-triggered mega-menu / flyout on each product link. Not built.
-- Apple's nav has scroll-triggered floating mode on certain product pages (changes width, gains shadow, becomes pill-shaped). Not built — needs captured trigger threshold and before/after CSS.
-- Apple's hero typically uses `<video autoplay loop muted>` or a high-resolution still + parallax layer. The placeholder is a flat gradient.
-- Search button on the live site opens a full-width search overlay. Not built.
-- Bag button on the live site opens a flyout panel. Not built.
-- Real responsive breakpoints (Apple uses several distinct widths). The scaffold has one breakpoint at `md` for the nav link list and a few for typography.
+- Amazon's real hero is a **rotating carousel** with 5–7 slides and auto-advance. The placeholder is a single static gradient — no carousel mechanics, no slide indicators, no auto-advance timer.
+- The **department dropdown** on the search bar opens a full overlay menu with 30+ categories. Not built — would need real list extraction and dropdown behavior.
+- **Account & Lists** hover opens a flyout with sign-in CTA + nested links. Not built.
+- **Cart** hover shows a mini-preview on the live site (when there are items). Not built.
+- **Sub-nav "All"** hamburger opens a full-page side drawer with category tree. Not built.
+- **Location selector** click opens a zip-code entry modal. Not built.
+- Real **search autocomplete** (suggestions appear as you type). Not built.
+- Real **breakpoints**. Amazon has multiple distinct widths (~1000px, ~750px, mobile). The scaffold uses Tailwind's default `md`/`lg` only.

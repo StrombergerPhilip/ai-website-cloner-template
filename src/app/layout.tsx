@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Brand",
-  description: "Brand homepage clone — neutral placeholder branding.",
+  title: "Shop",
+  description: "Shop homepage clone — neutral placeholder branding.",
 };
 
 export default function RootLayout({

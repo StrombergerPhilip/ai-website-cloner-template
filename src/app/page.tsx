@@ -1,10 +1,10 @@
 import { HeroSection } from "@/components/hero-section";
-import { SiteNav } from "@/components/site-nav";
+import { SiteHeader } from "@/components/site-header";
 
 export default function Home() {
   return (
     <>
-      <SiteNav />
+      <SiteHeader />
       <main className="flex-1">
         <HeroSection />
       </main>

@@ -13,6 +13,10 @@
   --color-link: var(--link);
   --color-nav: var(--nav);
   --color-nav-foreground: var(--nav-foreground);
+  --color-subnav: var(--subnav);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-foreground: var(--cta-foreground);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -70,9 +74,13 @@
   --border: oklch(0.92 0 0);
   --input: oklch(0.92 0 0);
   --ring: oklch(0.708 0 0);
-  --link: oklch(0.55 0.18 264);
-  --nav: oklch(0 0 0 / 80%);
-  --nav-foreground: oklch(0.96 0 0);
+  --link: oklch(0.48 0.07 200);
+  --nav: oklch(0.18 0.02 250);
+  --nav-foreground: oklch(0.98 0 0);
+  --subnav: oklch(0.26 0.02 250);
+  --cta: oklch(0.83 0.13 80);
+  --cta-hover: oklch(0.74 0.16 60);
+  --cta-foreground: oklch(0.18 0 0);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
