@@ -1,16 +1,15 @@
 import Link from "next/link";
+import { AccountMenu } from "@/components/header/account-menu";
+import { CategoryDrawer } from "@/components/header/category-drawer";
+import { LanguageMenu } from "@/components/header/language-menu";
+import { SearchBar } from "@/components/header/search-bar";
 import {
   BrandMark,
   CartIcon,
-  ChevronDownIcon,
-  GlobeIcon,
   MapPinIcon,
-  MenuIcon,
-  SearchIcon,
 } from "@/components/icons";
 
 const SUBNAV_ITEMS = [
-  "All",
   "Today's Deals",
   "Customer Service",
   "Registry",
@@ -20,21 +19,12 @@ const SUBNAV_ITEMS = [
   "Browsing History",
 ] as const;
 
-const DEPARTMENTS = [
-  "All Departments",
-  "Lorem Category",
-  "Ipsum Goods",
-  "Dolor Sit",
-  "Consectetur",
-] as const;
-
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* Top bar */}
       <div className="bg-[var(--nav)] text-[var(--nav-foreground)]">
         <div className="mx-auto flex h-[60px] max-w-[1500px] items-center gap-2 px-2 text-[14px]">
-          {/* Logo */}
           <Link
             href="/"
             aria-label="Shop home"
@@ -43,7 +33,6 @@ export function SiteHeader() {
             <BrandMark className="text-[22px]" />
           </Link>
 
-          {/* Deliver-to selector */}
           <Link
             href="#"
             className="hidden h-[50px] shrink-0 items-end rounded border border-transparent px-2 pb-1.5 hover:border-white lg:flex"
@@ -57,55 +46,11 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          {/* Search */}
-          <form
-            role="search"
-            className="flex h-10 flex-1 overflow-hidden rounded-md"
-          >
-            <button
-              type="button"
-              className="flex shrink-0 items-center gap-1 bg-[oklch(0.92_0_0)] px-2 text-[12px] text-[oklch(0.28_0_0)] hover:bg-[oklch(0.88_0_0)]"
-            >
-              <span>{DEPARTMENTS[0]}</span>
-              <ChevronDownIcon className="size-3" />
-            </button>
-            <input
-              type="text"
-              placeholder="Search Shop"
-              aria-label="Search"
-              className="min-w-0 flex-1 bg-white px-2 text-[14px] text-[oklch(0.18_0_0)] outline-none"
-            />
-            <button
-              type="submit"
-              aria-label="Submit search"
-              className="flex h-10 w-12 shrink-0 items-center justify-center bg-[var(--cta)] hover:bg-[var(--cta-hover)]"
-            >
-              <SearchIcon className="size-5 text-[var(--cta-foreground)]" />
-            </button>
-          </form>
+          <SearchBar />
 
-          {/* Language */}
-          <Link
-            href="#"
-            className="hidden h-[50px] shrink-0 items-center gap-1 rounded border border-transparent px-2 text-[14px] font-bold hover:border-white md:flex"
-          >
-            <GlobeIcon className="size-[18px]" />
-            <span>EN</span>
-            <ChevronDownIcon className="size-3 opacity-70" />
-          </Link>
+          <LanguageMenu />
+          <AccountMenu />
 
-          {/* Account */}
-          <Link
-            href="#"
-            className="hidden h-[50px] shrink-0 flex-col items-start justify-center rounded border border-transparent px-2 leading-tight hover:border-white md:flex"
-          >
-            <span className="text-[12px]">Hello, sign in</span>
-            <span className="text-[14px] font-bold">
-              Account &amp; Lists <ChevronDownIcon className="ml-0.5 inline size-3" />
-            </span>
-          </Link>
-
-          {/* Returns */}
           <Link
             href="#"
             className="hidden h-[50px] shrink-0 flex-col items-start justify-center rounded border border-transparent px-2 leading-tight hover:border-white lg:flex"
@@ -114,7 +59,6 @@ export function SiteHeader() {
             <span className="text-[14px] font-bold">&amp; Orders</span>
           </Link>
 
-          {/* Cart */}
           <Link
             href="#"
             aria-label="Cart with 0 items"
@@ -134,14 +78,8 @@ export function SiteHeader() {
       {/* Sub-nav */}
       <div className="bg-[var(--subnav)] text-[var(--nav-foreground)]">
         <div className="mx-auto flex h-[38px] max-w-[1500px] items-center gap-1 overflow-x-auto px-2 text-[14px]">
-          <Link
-            href="#"
-            className="flex shrink-0 items-center gap-1 rounded border border-transparent px-2 py-1 font-bold hover:border-white"
-          >
-            <MenuIcon className="size-4" />
-            <span>{SUBNAV_ITEMS[0]}</span>
-          </Link>
-          {SUBNAV_ITEMS.slice(1).map((label) => (
+          <CategoryDrawer />
+          {SUBNAV_ITEMS.map((label) => (
             <Link
               key={label}
               href="#"

@@ -13,6 +13,12 @@
 - **Responsive collapse:** at narrow widths the deliver-to selector, language picker, account dropdown, and returns link drop out progressively via `hidden md:flex` / `hidden lg:flex` so the search bar always stays visible.
 - **Sub-nav overflow:** horizontal scroll (`overflow-x-auto`) on narrow viewports — links remain reachable.
 
+### Interactive header clusters (client components in `src/components/header/`)
+- **Language menu** (`language-menu.tsx`): hover/focus on the globe button opens a 280px flyout with 7 language radio options and a country/region switch link. Pointer-triangle ornament at top-right. ~80ms open delay, ~160ms close delay so the cursor can travel from trigger to panel. Escape and click-outside both close it.
+- **Account menu** (`account-menu.tsx`): hover/focus on the Account & Lists button opens a 480px flyout with a top "Sign in" CTA + "New customer? Start here." link, then a two-column grid (Your Lists, Your Account) with ~12 nested links. Same hover/focus/escape/click-outside lifecycle as the language menu.
+- **Category drawer** (`category-drawer.tsx`): clicking the "All" hamburger in the sub-nav opens a left-anchored fixed dialog (340px wide, full height) with a dark header band ("Hello, sign in"), a "Shop by Department" section (10 placeholder departments), and a "Help & Settings" section. Backdrop click and Escape both close it. Body scroll is locked while open.
+- **Search bar** (`search-bar.tsx`): the search input shows an autocomplete dropdown on focus. Mock suggestion list filters live as the user types. Arrow Up / Arrow Down navigate suggestions, Enter selects, Escape and click-outside close. The department selector to the left of the input opens its own dropdown listbox with 9 placeholder departments; the chosen department is reflected in autocomplete suggestions ("in Lorem Electronics"). Active option uses `aria-activedescendant`, ARIA combobox roles applied.
+
 ### Hero banner
 - **Static layout** — no carousel rotation, no scroll triggers.
 - **CTA hover:** background `--cta` → `--cta-hover`.
@@ -21,10 +27,8 @@
 ## Behaviors NOT implemented (would require live extraction)
 
 - Amazon's real hero is a **rotating carousel** with 5–7 slides and auto-advance. The placeholder is a single static gradient — no carousel mechanics, no slide indicators, no auto-advance timer.
-- The **department dropdown** on the search bar opens a full overlay menu with 30+ categories. Not built — would need real list extraction and dropdown behavior.
-- **Account & Lists** hover opens a flyout with sign-in CTA + nested links. Not built.
 - **Cart** hover shows a mini-preview on the live site (when there are items). Not built.
-- **Sub-nav "All"** hamburger opens a full-page side drawer with category tree. Not built.
 - **Location selector** click opens a zip-code entry modal. Not built.
-- Real **search autocomplete** (suggestions appear as you type). Not built.
+- Real **search autocomplete** server (current implementation is a static client-side filter against ~7 hard-coded suggestions, not a live suggest service).
+- Real **department list** (current dropdown has 9 placeholders vs amazon's 30+ categories with two-level nesting).
 - Real **breakpoints**. Amazon has multiple distinct widths (~1000px, ~750px, mobile). The scaffold uses Tailwind's default `md`/`lg` only.
