@@ -1,45 +1,37 @@
-# Page Topology — amazon.com (above-the-fold clone)
-
-## Important caveat
-
-**This clone was produced WITHOUT browser automation.** No Chrome MCP / Playwright / Puppeteer was attached when the skill ran. Per the `clone-website` skill's own pre-flight rules, this means none of the values below come from `getComputedStyle()` against the live page — they are reasonable approximations from general knowledge of amazon.com's design language, intentionally combined with neutral placeholder branding to sidestep IP risk.
-
-If you want a real pixel-perfect clone, relaunch with `claude --chrome` and re-invoke the skill. The work in this branch is a scaffold, not a faithful capture.
+# Page Topology — Apple-style above-the-fold scaffold
 
 ## Scope
 
-Above-the-fold only at desktop widths:
+Above-the-fold only: a single-row fixed navbar and a centered marketing hero. No commerce clusters, no two-row commerce nav, no carousel.
 
-1. **Top utility bar** — dark navy, contains brand mark, deliver-to selector, large search bar with department dropdown and CTA button, language picker, account dropdown, returns link, cart with count badge
-2. **Sub-nav** — slightly lighter navy, hamburger ("All") + horizontal links (Today's Deals, Customer Service, Registry, Gift Cards, Sell, Releases, Browsing History)
-3. **Hero banner** — wide gradient banner with overlay text card (eyebrow + headline + body copy + CTA), bottom fade into page background
-
-Everything below the fold (product carousels, category grids, recommendations, footer, etc.) is intentionally out of scope.
+Built to the explicit "Apple-like, quiet, premium" brief — not as a clone of any real site. Branding is placeholder ("Shop") to keep it IP-safe.
 
 ## Layout
 
-- **Body:** white background, sans-serif type stack (Inter via `next/font`, neutral fallback).
-- **Header:** `position: sticky; top: 0; z-index: 50`, two stacked rows.
-  - Row 1: 60px tall, centered container max-width 1500px, flex layout with brand → location → search (flex-1) → language → account → returns → cart.
-  - Row 2: 38px tall, centered container max-width 1500px, horizontal scrollable nav links.
-- **Hero:** full-width gradient block, 380px (mobile) → 480px (md) → 560px (lg) tall, overlay text card pinned left within the same 1500px container, bottom fade gradient to body background.
+### Navbar (`src/components/site-header.tsx`)
+- **Position:** `fixed` at top, content flows under it via backdrop blur.
+- **Height:** 44px default, **40px** when `window.scrollY > 10`.
+- **Background:** `rgba(22, 22, 23, 0.72)` default, `rgba(22, 22, 23, 0.82)` scrolled.
+- **Filter:** `saturate(180%) blur(20px)` default, `blur(24px)` scrolled.
+- **Border-bottom:** `1px solid rgba(255, 255, 255, 0.08)` (subtle separator).
+- **Container:** centered, `max-width: 1024px`, `padding-inline: 22px`.
+- **Layout:** brand mark on the left, 6 nav links flushed right with `gap: 24px`.
+- **Typography:** brand `14px / 500 / -0.01em`. Nav links `12px / 400 / -0.01em`.
 
-## Interaction model
+### Hero (`src/components/hero-section.tsx`)
+- **Background:** `#f5f5f7` (warm off-white, not pure white).
+- **Text color:** `#1d1d1f`.
+- **Text block:** centered, `max-width: 700px`, `padding-inline: 22px`.
+- **Vertical rhythm:** `paddingTop: calc(44px + 96px)` (96px below the fixed nav), then 16px above headline, 12px above subhead, 24px above CTAs, 32px above visual, 56px below visual.
+- **Headline:** `clamp(48px, 7vw, 80px) / line-height 0.95 / letter-spacing -0.045em / weight 600`.
+- **Subhead:** `clamp(21px, 3vw, 28px) / line-height 1.15 / letter-spacing -0.02em / weight 400`.
+- **Eyebrow:** `17px / weight 400 / -0.01em`, muted `#6e6e73`.
+- **Primary CTA:** filled blue pill (`background #0071e3`, hover `#0077ed`), height 44px, padding-inline 22px, border-radius 999px, text 17px / 400.
+- **Secondary CTA:** text-only blue (`#0071e3`) with a trailing chevron, hover dims to 0.8 opacity.
+- **Visual:** centered rounded rectangle (radius 24px, aspect 16:10), soft radial gradient base + two ambient color glows (cool blue + warm rose), boxed shadow `0 30px 80px -20px rgba(0,0,0,0.15)`.
 
-- Header: static layout. Hover-driven border outline on each interactive cluster (Amazon's signature "hover reveals white border" behavior is implemented).
-- Search button: orange/yellow background, darkens on hover.
-- Sub-nav links: same hover-border treatment.
-- Hero CTA button: background color shifts on hover.
+## Brand swap
 
-No scroll-triggered changes, no dropdowns, no mega-menu, no carousel rotation — those would require browser-captured trigger thresholds and state captures.
-
-## Branding constraint
-
-Per user request, all amazon-trademarked content is replaced:
-- amazon wordmark / smile logo → `<BrandMark>` rendering "Shop"
-- Search placeholder → "Search Shop"
-- Department names → generic "Lorem Category", "Ipsum Goods", etc.
-- Deliver-to placeholder → "Lorem 10001"
-- Sub-nav labels are generic enough to keep verbatim (Today's Deals, Customer Service, etc.)
-
-A grep for `amazon|prime` (case-insensitive) over `src/` and `public/` should return zero matches.
+- Wordmark: `<BrandMark>` renders "Shop" (no real-brand reference)
+- Hero copy: Lorem-ipsum-flavored placeholder
+- Nav link labels: generic ("Store", "Discover", "Studio", "Vision", "Sound", "Support")

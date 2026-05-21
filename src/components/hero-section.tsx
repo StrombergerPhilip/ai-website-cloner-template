@@ -1,54 +1,158 @@
-import Link from "next/link";
+"use client";
+
+import { useEffect, useState, type CSSProperties } from "react";
+
+function stagger(mounted: boolean, delayMs: number): CSSProperties {
+  return {
+    opacity: mounted ? 1 : 0,
+    transform: mounted ? "translateY(0)" : "translateY(12px)",
+    transition: `opacity 700ms var(--ease-apple) ${delayMs}ms, transform 700ms var(--ease-apple) ${delayMs}ms`,
+    willChange: "opacity, transform",
+  };
+}
 
 export function HeroSection() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
   return (
     <section
-      aria-label="Featured promotion"
+      aria-label="Featured"
       className="relative w-full overflow-hidden"
+      style={{
+        background: "#f5f5f7",
+        color: "#1d1d1f",
+        paddingTop: "calc(44px + 96px)",
+        paddingBottom: 56,
+      }}
     >
       <div
-        className="relative h-[380px] w-full md:h-[480px] lg:h-[560px]"
-        style={{
-          background:
-            "linear-gradient(135deg, oklch(0.75 0.05 230) 0%, oklch(0.55 0.07 250) 60%, oklch(0.42 0.06 260) 100%)",
-        }}
+        className="mx-auto flex flex-col items-center text-center"
+        style={{ maxWidth: 700, paddingInline: 22 }}
       >
-        {/* Decorative content placeholder */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0"
+        <p
+          className="hero-entrance"
           style={{
-            background:
-              "radial-gradient(circle at 75% 40%, oklch(0.95 0.04 80 / 35%) 0%, transparent 50%)",
+            ...stagger(mounted, 0),
+            fontSize: 17,
+            fontWeight: 400,
+            letterSpacing: "-0.01em",
+            color: "#6e6e73",
           }}
-        />
+        >
+          New
+        </p>
 
-        {/* Overlay text card */}
-        <div className="absolute inset-0 mx-auto flex max-w-[1500px] items-center px-6 md:px-10">
-          <div className="max-w-[460px] rounded-md bg-white/95 p-6 shadow-md md:p-8">
-            <p className="text-[13px] font-bold uppercase tracking-wider text-muted-foreground">
-              Lorem deals
-            </p>
-            <h1 className="mt-1 text-[28px] font-bold leading-[1.15] text-foreground md:text-[34px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </h1>
-            <p className="mt-3 text-[15px] leading-snug text-foreground/80">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <Link
-              href="#"
-              className="mt-5 inline-flex h-[33px] items-center justify-center rounded-full bg-[var(--cta)] px-5 text-[14px] font-medium text-[var(--cta-foreground)] shadow-sm transition-colors hover:bg-[var(--cta-hover)]"
-            >
-              Shop deals
-            </Link>
-          </div>
+        <h1
+          className="hero-entrance"
+          style={{
+            ...stagger(mounted, 0),
+            marginTop: 16,
+            fontSize: "clamp(48px, 7vw, 80px)",
+            lineHeight: 0.95,
+            letterSpacing: "-0.045em",
+            fontWeight: 600,
+          }}
+        >
+          Lorem ipsum.
+          <br />
+          Built different.
+        </h1>
+
+        <p
+          className="hero-entrance"
+          style={{
+            ...stagger(mounted, 80),
+            marginTop: 12,
+            fontSize: "clamp(21px, 3vw, 28px)",
+            lineHeight: 1.15,
+            letterSpacing: "-0.02em",
+            fontWeight: 400,
+            color: "#1d1d1f",
+          }}
+        >
+          Ultra-thin. Ultra-light. Pure precision.
+        </p>
+
+        <div
+          className="hero-entrance flex flex-wrap items-center justify-center"
+          style={{ ...stagger(mounted, 140), marginTop: 24, gap: 18 }}
+        >
+          <a
+            href="#"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              height: 44,
+              paddingInline: 22,
+              borderRadius: 999,
+              fontSize: 17,
+              fontWeight: 400,
+              background: "#0071e3",
+              color: "#fff",
+              transition: "background-color 200ms var(--ease-apple)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#0077ed";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#0071e3";
+            }}
+          >
+            Learn more
+          </a>
+          <a
+            href="#"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              height: 44,
+              fontSize: 17,
+              fontWeight: 400,
+              color: "#0071e3",
+              transition: "opacity 200ms var(--ease-apple)",
+            }}
+            className="hover:opacity-80"
+          >
+            Buy
+            <span aria-hidden="true" style={{ marginLeft: 4 }}>
+              ›
+            </span>
+          </a>
         </div>
 
         <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background"
-        />
+          className="hero-entrance"
+          style={{ ...stagger(mounted, 220), marginTop: 32, width: "100%" }}
+        >
+          <div
+            className="hero-float"
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "16 / 10",
+              borderRadius: 24,
+              overflow: "hidden",
+              background:
+                "radial-gradient(circle at 50% 35%, #ffffff 0%, #ececf1 50%, #d8d8de 100%)",
+              boxShadow: "0 30px 80px -20px rgba(0, 0, 0, 0.15)",
+            }}
+          >
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "radial-gradient(circle at 28% 32%, rgba(120, 160, 255, 0.28) 0%, transparent 55%), radial-gradient(circle at 72% 68%, rgba(255, 180, 200, 0.22) 0%, transparent 55%)",
+              }}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

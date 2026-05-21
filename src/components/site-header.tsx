@@ -1,95 +1,86 @@
-import Link from "next/link";
-import { AccountMenu } from "@/components/header/account-menu";
-import { CategoryDrawer } from "@/components/header/category-drawer";
-import { LanguageMenu } from "@/components/header/language-menu";
-import { SearchBar } from "@/components/header/search-bar";
-import {
-  BrandMark,
-  CartIcon,
-  MapPinIcon,
-} from "@/components/icons";
+"use client";
 
-const SUBNAV_ITEMS = [
-  "Today's Deals",
-  "Customer Service",
-  "Registry",
-  "Gift Cards",
-  "Sell",
-  "Releases",
-  "Browsing History",
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { BrandMark } from "@/components/icons";
+
+const NAV_LINKS = [
+  "Store",
+  "Discover",
+  "Studio",
+  "Vision",
+  "Sound",
+  "Support",
 ] as const;
 
 export function SiteHeader() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full">
-      {/* Top bar */}
-      <div className="bg-[var(--nav)] text-[var(--nav-foreground)]">
-        <div className="mx-auto flex h-[60px] max-w-[1500px] items-center gap-2 px-2 text-[14px]">
-          <Link
-            href="/"
-            aria-label="Shop home"
-            className="flex h-[50px] shrink-0 items-center rounded border border-transparent px-2 hover:border-white"
-          >
-            <BrandMark className="text-[22px]" />
-          </Link>
+    <header
+      className="fixed inset-x-0 top-0 z-50"
+      style={{
+        height: scrolled ? 40 : 44,
+        backgroundColor: scrolled
+          ? "rgba(22, 22, 23, 0.82)"
+          : "rgba(22, 22, 23, 0.72)",
+        backdropFilter: `saturate(180%) blur(${scrolled ? 24 : 20}px)`,
+        WebkitBackdropFilter: `saturate(180%) blur(${scrolled ? 24 : 20}px)`,
+        borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+        transition:
+          "height 300ms var(--ease-apple), background-color 300ms var(--ease-apple), backdrop-filter 300ms var(--ease-apple)",
+      }}
+    >
+      <nav
+        aria-label="Primary"
+        className="mx-auto flex h-full items-center"
+        style={{ maxWidth: 1024, paddingInline: 22 }}
+      >
+        <Link
+          href="/"
+          aria-label="Shop home"
+          className="text-white transition-opacity hover:opacity-80"
+          style={{
+            fontSize: 14,
+            fontWeight: 500,
+            letterSpacing: "-0.01em",
+            transitionDuration: "200ms",
+            transitionTimingFunction: "var(--ease-apple)",
+          }}
+        >
+          <BrandMark />
+        </Link>
 
-          <Link
-            href="#"
-            className="hidden h-[50px] shrink-0 items-end rounded border border-transparent px-2 pb-1.5 hover:border-white lg:flex"
-          >
-            <MapPinIcon className="mr-1 size-[15px]" />
-            <span className="flex flex-col leading-tight">
-              <span className="text-[12px] text-[oklch(0.82_0_0)]">
-                Deliver to
-              </span>
-              <span className="text-[14px] font-bold">Lorem 10001</span>
-            </span>
-          </Link>
-
-          <SearchBar />
-
-          <LanguageMenu />
-          <AccountMenu />
-
-          <Link
-            href="#"
-            className="hidden h-[50px] shrink-0 flex-col items-start justify-center rounded border border-transparent px-2 leading-tight hover:border-white lg:flex"
-          >
-            <span className="text-[12px]">Returns</span>
-            <span className="text-[14px] font-bold">&amp; Orders</span>
-          </Link>
-
-          <Link
-            href="#"
-            aria-label="Cart with 0 items"
-            className="flex h-[50px] shrink-0 items-end gap-1 rounded border border-transparent px-2 pb-1 hover:border-white"
-          >
-            <div className="relative">
-              <CartIcon className="size-9" />
-              <span className="absolute -top-1 left-5 min-w-[18px] rounded-full bg-[var(--cta)] px-1 text-center text-[13px] font-bold text-[var(--cta-foreground)]">
-                0
-              </span>
-            </div>
-            <span className="hidden text-[14px] font-bold sm:inline">Cart</span>
-          </Link>
-        </div>
-      </div>
-
-      {/* Sub-nav */}
-      <div className="bg-[var(--subnav)] text-[var(--nav-foreground)]">
-        <div className="mx-auto flex h-[38px] max-w-[1500px] items-center gap-1 overflow-x-auto px-2 text-[14px]">
-          <CategoryDrawer />
-          {SUBNAV_ITEMS.map((label) => (
-            <Link
-              key={label}
-              href="#"
-              className="shrink-0 rounded border border-transparent px-2 py-1 hover:border-white"
-            >
-              {label}
-            </Link>
+        <ul
+          className="ml-auto flex items-center"
+          style={{ gap: 24 }}
+        >
+          {NAV_LINKS.map((label) => (
+            <li key={label}>
+              <Link
+                href="#"
+                className="text-white transition-opacity hover:opacity-80"
+                style={{
+                  fontSize: 12,
+                  fontWeight: 400,
+                  letterSpacing: "-0.01em",
+                  transitionDuration: "200ms",
+                  transitionTimingFunction: "var(--ease-apple)",
+                }}
+              >
+                {label}
+              </Link>
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </nav>
     </header>
   );
 }
