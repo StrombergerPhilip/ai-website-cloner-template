@@ -52,3 +52,6 @@ temp/
 /playwright-report/
 /tests/e2e/.output/
 /test-results/
+
+# Coverage
+/coverage/
