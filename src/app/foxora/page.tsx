@@ -16,7 +16,7 @@ import { Rule } from "@/components/foxora/shared";
 export default function FoxoraPage() {
   return (
     <div
-      className="relative z-[1] mx-auto max-w-[1180px] px-5 py-14 sm:px-12 lg:px-[72px]"
+      className="foxora-page relative z-[1] mx-auto max-w-[1180px] px-5 py-14 sm:px-12 lg:px-[72px]"
     >
       <TopBar />
       <Hero />

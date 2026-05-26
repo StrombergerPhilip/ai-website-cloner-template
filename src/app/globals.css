@@ -174,6 +174,18 @@
 .theme-foxora .foxora-fu {
   animation: foxora-fu 0.6s ease both;
 }
+.theme-foxora .foxora-page > * {
+  animation: foxora-fu 0.6s ease both;
+}
+.theme-foxora .foxora-page > *:nth-child(2)  { animation-delay: 0.05s; }
+.theme-foxora .foxora-page > *:nth-child(3)  { animation-delay: 0.10s; }
+.theme-foxora .foxora-page > *:nth-child(4)  { animation-delay: 0.15s; }
+.theme-foxora .foxora-page > *:nth-child(5)  { animation-delay: 0.20s; }
+.theme-foxora .foxora-page > *:nth-child(6)  { animation-delay: 0.25s; }
+.theme-foxora .foxora-page > *:nth-child(7)  { animation-delay: 0.30s; }
+.theme-foxora .foxora-page > *:nth-child(8)  { animation-delay: 0.35s; }
+.theme-foxora .foxora-page > *:nth-child(9)  { animation-delay: 0.40s; }
+.theme-foxora .foxora-page > *:nth-child(10) { animation-delay: 0.45s; }
 
 .theme-foxora-app {
   --fxa-orange: #FF6B1A;
@@ -223,6 +235,33 @@
 @keyframes fxa-typing {
   0%, 60%, 100% { opacity: 0.3; }
   30% { opacity: 1; }
+}
+
+@media print {
+  /* Strategy Brief: high-contrast B/W for paper */
+  .theme-foxora {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .theme-foxora .foxora-bg { background: #fff !important; }
+  .theme-foxora .foxora-grain { display: none !important; }
+  .theme-foxora .foxora-page {
+    padding: 24px !important;
+    animation: none !important;
+  }
+  .theme-foxora .foxora-page > * { animation: none !important; }
+
+  /* Landing: hide all sticky + floating chrome (nav, chat, cookie) on print */
+  .theme-foxora-app .fixed {
+    display: none !important;
+  }
+  .theme-foxora-app .fxa-fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .theme-foxora-app section {
+    page-break-inside: avoid;
+  }
 }
 
 @layer base {

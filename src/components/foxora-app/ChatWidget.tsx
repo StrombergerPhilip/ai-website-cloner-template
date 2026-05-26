@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { pickChatDelay } from "@/lib/foxoraRandom";
 
 type Msg = { from: "bot" | "user"; html: string };
 
@@ -91,7 +92,7 @@ export function ChatWidget() {
     setTimeout(() => {
       setTyping(false);
       setMessages((m) => [...m, { from: "bot", html: getResponse(t) }]);
-    }, 1200);
+    }, pickChatDelay());
   };
 
   return (
