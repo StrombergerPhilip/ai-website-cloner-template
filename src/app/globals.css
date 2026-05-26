@@ -2,13 +2,35 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
+.theme-foxora-app :is(#how, #calc, #agent, #membership, #partners, #faq, #signup) {
+  scroll-margin-top: 90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .theme-foxora .foxora-page > *,
+  .theme-foxora-app .fxa-fade-in {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .theme-foxora-app [aria-label="Chat öffnen"] {
+    animation: none !important;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -18,11 +40,6 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -46,6 +63,19 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Parivie theme tokens (used inside .theme-parivie) */
+  --color-parivie-pink: oklch(0.61 0.235 350);
+  --color-parivie-pink-soft: oklch(0.94 0.04 350);
+  --color-parivie-pink-card: oklch(0.91 0.05 350);
+  --color-parivie-ink: oklch(0.16 0.04 280);
+
+  /* Apple theme tokens */
+  --color-apple-bg: oklch(1 0 0);
+  --color-apple-panel: oklch(0.97 0 0);
+  --color-apple-ink: oklch(0.21 0 0);
+  --color-apple-muted: oklch(0.55 0 0);
+  --color-apple-link: oklch(0.55 0.15 252);
 }
 
 :root {
@@ -67,11 +97,6 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -83,38 +108,182 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+.theme-parivie {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.16 0.04 280);
+  --primary: oklch(0.61 0.235 350);
+  --primary-foreground: oklch(1 0 0);
+  --muted: oklch(0.94 0.04 350);
+  --muted-foreground: oklch(0.45 0.04 280);
+  --border: oklch(0.88 0.04 350);
+  --ring: oklch(0.61 0.235 350);
+  --radius: 1rem;
+}
+
+.theme-apple {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.21 0 0);
+  --primary: oklch(0.55 0.15 252);
+  --primary-foreground: oklch(1 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.55 0 0);
+  --border: oklch(0.92 0 0);
+  --ring: oklch(0.55 0.15 252);
+  --radius: 1.125rem;
+}
+
+.theme-foxora {
+  /* surfaces */
+  --foxora-bg: #07090f;
+  --foxora-bg2: #0b0e17;
+  --foxora-card: #10141f;
+  --foxora-card2: #161b29;
+  --foxora-card3: #1c2235;
+  --foxora-border: #1f2535;
+  --foxora-borderW: #2a3148;
+  /* brand */
+  --foxora-fox: #f7931a;
+  --foxora-fox-bright: #ffa836;
+  --foxora-fox-dim: rgba(247, 147, 26, 0.1);
+  --foxora-fox-edge: rgba(247, 147, 26, 0.32);
+  /* text */
+  --foxora-text: #eef1f6;
+  --foxora-text2: #b6bcc9;
+  --foxora-muted: #6b7388;
+  /* status */
+  --foxora-green: #1d9e75;
+  --foxora-red: #e24b4a;
+  --foxora-amber: #f0b033;
+  /* fonts */
+  --foxora-display: var(--font-unbounded);
+  --foxora-body: var(--font-dmsans);
+  --foxora-mono: var(--font-jetmono);
+
+  /* shadcn token overrides for compatibility inside the route */
+  --background: var(--foxora-bg);
+  --foreground: var(--foxora-text);
+  --primary: var(--foxora-fox);
+  --primary-foreground: #1a1108;
+  --muted: var(--foxora-card2);
+  --muted-foreground: var(--foxora-muted);
+  --border: var(--foxora-border);
+  --ring: var(--foxora-fox);
+  --radius: 0.875rem;
+  font-family: var(--foxora-body), system-ui, sans-serif;
+}
+
+.theme-foxora .foxora-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  z-index: 0;
+}
+
+.theme-foxora .foxora-bg {
+  background:
+    radial-gradient(1100px 600px at 85% -8%, rgba(247, 147, 26, 0.1), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(247, 147, 26, 0.05), transparent 55%),
+    var(--foxora-bg);
+}
+
+@keyframes foxora-fu {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.theme-foxora .foxora-fu {
+  animation: foxora-fu 0.6s ease both;
+}
+.theme-foxora .foxora-page > * {
+  animation: foxora-fu 0.6s ease both;
+}
+.theme-foxora .foxora-page > *:nth-child(2)  { animation-delay: 0.05s; }
+.theme-foxora .foxora-page > *:nth-child(3)  { animation-delay: 0.10s; }
+.theme-foxora .foxora-page > *:nth-child(4)  { animation-delay: 0.15s; }
+.theme-foxora .foxora-page > *:nth-child(5)  { animation-delay: 0.20s; }
+.theme-foxora .foxora-page > *:nth-child(6)  { animation-delay: 0.25s; }
+.theme-foxora .foxora-page > *:nth-child(7)  { animation-delay: 0.30s; }
+.theme-foxora .foxora-page > *:nth-child(8)  { animation-delay: 0.35s; }
+.theme-foxora .foxora-page > *:nth-child(9)  { animation-delay: 0.40s; }
+.theme-foxora .foxora-page > *:nth-child(10) { animation-delay: 0.45s; }
+
+.theme-foxora-app {
+  --fxa-orange: #FF6B1A;
+  --fxa-orange-bright: #FF8533;
+  --fxa-orange-dark: #E65500;
+  --fxa-dark: #0F0E0C;
+  --fxa-darker: #0a0907;
+  --fxa-card: #1A1814;
+  --fxa-border: #2A2620;
+  --fxa-text: #FFF8F0;
+  --fxa-text-muted: #A39B8E;
+  --fxa-green: #34D399;
+
+  --background: var(--fxa-dark);
+  --foreground: var(--fxa-text);
+  --primary: var(--fxa-orange);
+  --primary-foreground: #FFFFFF;
+  --muted: var(--fxa-card);
+  --muted-foreground: var(--fxa-text-muted);
+  --border: var(--fxa-border);
+  --ring: var(--fxa-orange);
+  --radius: 1rem;
+  background-color: var(--fxa-dark);
+  color: var(--fxa-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.theme-foxora-app .fxa-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.theme-foxora-app .fxa-fade-in.fxa-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fxa-blink { 50% { opacity: 0.3; } }
+@keyframes fxa-pulse {
+  0%, 100% { box-shadow: 0 12px 32px rgba(255,107,26,0.5), 0 0 0 0 rgba(255,107,26,0.4); }
+  50% { box-shadow: 0 12px 32px rgba(255,107,26,0.5), 0 0 0 16px rgba(255,107,26,0); }
+}
+@keyframes fxa-slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fxa-typing {
+  0%, 60%, 100% { opacity: 0.3; }
+  30% { opacity: 1; }
+}
+
+@media print {
+  /* Strategy Brief: high-contrast B/W for paper */
+  .theme-foxora {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .theme-foxora .foxora-bg { background: #fff !important; }
+  .theme-foxora .foxora-grain { display: none !important; }
+  .theme-foxora .foxora-page {
+    padding: 24px !important;
+    animation: none !important;
+  }
+  .theme-foxora .foxora-page > * { animation: none !important; }
+
+  /* Landing: hide all sticky + floating chrome (nav, chat, cookie) on print */
+  .theme-foxora-app .fixed {
+    display: none !important;
+  }
+  .theme-foxora-app .fxa-fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .theme-foxora-app section {
+    page-break-inside: avoid;
+  }
 }
 
 @layer base {
