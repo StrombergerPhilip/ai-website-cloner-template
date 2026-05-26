@@ -2,6 +2,28 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
+.theme-foxora-app :is(#how, #calc, #agent, #membership, #partners, #faq, #signup) {
+  scroll-margin-top: 90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .theme-foxora .foxora-page > *,
+  .theme-foxora-app .fxa-fade-in {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .theme-foxora-app [aria-label="Chat öffnen"] {
+    animation: none !important;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
