@@ -7,9 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-montserrat), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, monospace;
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -18,6 +18,11 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -34,8 +39,6 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
   --color-brand-coral: var(--brand-coral);
   --color-brand-coral-soft: var(--brand-coral-soft);
   --color-brand-night: var(--brand-night);
@@ -49,36 +52,6 @@
 }
 
 :root {
-  --background: oklch(0.08 0.005 270);
-  --foreground: oklch(0.97 0 0);
-  --card: oklch(0.13 0.007 270);
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.13 0.007 270);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.78 0.17 85);
-  --primary-foreground: oklch(0.1 0.01 270);
-  --secondary: oklch(0.18 0.008 270);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.18 0.008 270);
-  --muted-foreground: oklch(0.6 0.01 270);
-  --accent: oklch(0.78 0.17 85);
-  --accent-foreground: oklch(0.1 0.01 270);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.78 0.17 85);
-  --radius: 0.625rem;
-  --gold: oklch(0.78 0.17 85);
-  --gold-light: oklch(0.85 0.18 88);
-  --gold-dark: oklch(0.62 0.14 82);
-  --sidebar: oklch(0.1 0.005 270);
-  --sidebar-foreground: oklch(0.97 0 0);
-  --sidebar-primary: oklch(0.78 0.17 85);
-  --sidebar-primary-foreground: oklch(0.1 0.01 270);
-  --sidebar-accent: oklch(0.18 0.008 270);
-  --sidebar-accent-foreground: oklch(0.97 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.78 0.17 85);
   --background: oklch(0.995 0.003 60);
   --foreground: oklch(0.16 0.01 60);
   --card: oklch(0.99 0.004 60);
@@ -164,73 +137,6 @@
     font-feature-settings: "cv11", "ss01";
   }
   html {
-    @apply font-sans scroll-smooth;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-@keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.17 85 / 0.4); }
-  50% { box-shadow: 0 0 0 12px oklch(0.78 0.17 85 / 0); }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.7s ease-out forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.gold-shimmer {
-  background: linear-gradient(
-    90deg,
-    oklch(0.62 0.14 82) 0%,
-    oklch(0.85 0.18 88) 40%,
-    oklch(0.78 0.17 85) 60%,
-    oklch(0.62 0.14 82) 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 3s linear infinite;
-}
-
-.gold-text {
-  background: linear-gradient(135deg, oklch(0.62 0.14 82) 0%, oklch(0.85 0.18 88) 50%, oklch(0.78 0.17 85) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.section-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, oklch(0.78 0.17 85 / 0.4), transparent);
-}
-
-.pulse-gold {
-  animation: pulse-gold 2s infinite;
     @apply font-sans antialiased;
   }
   ::selection {
