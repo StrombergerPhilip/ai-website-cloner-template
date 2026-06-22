@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { Inter, Montserrat } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -7,19 +9,24 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { getServerDict } from "@/lib/i18n/get-server-dict";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://foxora.io";
 
 export const metadata: Metadata = {
+  title: "TGI – Nicht überlegen. TUN.",
+  description: "TGI – Das Nummer 1 Sales Team. Worldwide. Wir bauen dein Team und du verdienst von der Produktivität.",
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Foxora — Start Kit · v2.0",
@@ -55,6 +62,8 @@ export default async function RootLayout({
   const { locale } = await getServerDict();
   return (
     <html
+      lang="de"
+      className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
