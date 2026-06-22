@@ -10,6 +10,17 @@ html {
   scroll-margin-top: 90px;
 }
 
+/* Activation-banner offset: when .fxa-banner is rendered, push nav + hero down */
+.theme-foxora-app .fxa-nav { top: 0; }
+.theme-foxora-app:has(.fxa-banner) .fxa-nav { top: 44px; }
+.theme-foxora-app:has(.fxa-banner) .fxa-hero { padding-top: 154px; }
+@media (min-width: 640px) {
+  .theme-foxora-app:has(.fxa-banner) .fxa-hero { padding-top: 184px; }
+}
+.theme-foxora-app:has(.fxa-banner) :is(#how, #calc, #agent, #membership, #partners, #faq, #signup) {
+  scroll-margin-top: 134px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .theme-foxora .foxora-page > *,

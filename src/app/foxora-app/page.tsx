@@ -1,3 +1,4 @@
+import { ActivationBanner } from "@/components/foxora-app/ActivationBanner";
 import { Agent } from "@/components/foxora-app/Agent";
 import { Calculator } from "@/components/foxora-app/Calculator";
 import { ChatWidget } from "@/components/foxora-app/ChatWidget";
@@ -17,6 +18,7 @@ import { TrustBar } from "@/components/foxora-app/TrustBar";
 export default function FoxoraAppPage() {
   return (
     <>
+      <ActivationBanner />
       <Nav />
       <Hero />
       <TrustBar />

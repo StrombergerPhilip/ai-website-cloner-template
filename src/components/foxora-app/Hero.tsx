@@ -23,7 +23,7 @@ const txs = [
 export function Hero() {
   return (
     <section
-      className="flex min-h-screen items-center px-5 pb-20 pt-[110px] sm:px-10 sm:pt-[140px]"
+      className="fxa-hero flex min-h-screen items-center px-5 pb-20 pt-[110px] sm:px-10 sm:pt-[140px]"
       style={{
         background:
           "radial-gradient(ellipse at top right, rgba(255,107,26,0.15), transparent 60%), radial-gradient(ellipse at bottom left, rgba(255,107,26,0.08), transparent 60%)",

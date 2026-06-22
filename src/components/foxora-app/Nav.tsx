@@ -16,7 +16,7 @@ export function Nav() {
   const [lang, setLang] = useState<"DE" | "EN">("DE");
   return (
     <nav
-      className="fixed inset-x-0 top-0 z-[100] flex items-center justify-between border-b px-4 py-[14px] backdrop-blur-xl sm:px-10 sm:py-[18px]"
+      className="fxa-nav fixed inset-x-0 z-[100] flex items-center justify-between border-b px-4 py-[14px] backdrop-blur-xl sm:px-10 sm:py-[18px]"
       style={{
         background: "rgba(15,14,12,0.85)",
         borderColor: "var(--fxa-border)",
