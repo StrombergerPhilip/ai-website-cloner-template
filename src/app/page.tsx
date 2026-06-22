@@ -8,6 +8,10 @@ import { NoNetworkSection } from "@/components/NoNetworkSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { JoinTeamSection } from "@/components/JoinTeamSection";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/sections/hero";
+import { ValuePillars } from "@/components/sections/value-pillars";
+import { ClosingCta } from "@/components/sections/closing-cta";
+import { TrustStripAndMiniCalc } from "@/components/sections/trust-strip";
 
 export default function Home() {
   return (
@@ -31,6 +35,10 @@ export default function Home() {
         <JoinTeamSection />
       </main>
       <Footer />
+      <Hero />
+      <ValuePillars />
+      <TrustStripAndMiniCalc />
+      <ClosingCta />
     </>
   );
 }
