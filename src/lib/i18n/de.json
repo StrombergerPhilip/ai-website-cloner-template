@@ -330,5 +330,110 @@
     "legal": "© 2026 Foxora GmbH · Klagenfurt + Foxora FZ-LLC · Dubai",
     "impressum": "Impressum",
     "datenschutz": "Datenschutz"
+  },
+  "impressum": {
+    "kicker": "Impressum",
+    "title": "Offenlegung & Anbieter­kennzeichnung",
+    "lead": "Angaben gemäß § 5 ECG, § 14 UGB und § 24 MedienG (Österreich) sowie § 5 TMG (Deutschland).",
+    "sections": [
+      {
+        "title": "Anbieter",
+        "lines": [
+          "Foxora GmbH (in Gründung)",
+          "Musterstraße 1",
+          "9020 Klagenfurt am Wörthersee",
+          "Österreich"
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "lines": [
+          "E-Mail: hello@foxora.io",
+          "Web: https://foxora.io"
+        ]
+      },
+      {
+        "title": "Vertretungs­berechtigt",
+        "lines": [
+          "Geschäftsführung: noch zu bestellen",
+          "Firmenbuch: Eintragung beim Landesgericht Klagenfurt beantragt"
+        ]
+      },
+      {
+        "title": "Unternehmens­gegenstand",
+        "lines": [
+          "Betrieb eines Premium-Loyalty-Programms inklusive zugehöriger Software und Plattform-Services."
+        ]
+      },
+      {
+        "title": "Schwester­gesellschaft",
+        "lines": [
+          "Foxora FZ-LLC (in Gründung)",
+          "DMCC / IFZA, Dubai, Vereinigte Arabische Emirate",
+          "Betreibt App-Operations und internationalen Vertrieb auf Basis eines IP-Lizenz­vertrags mit der Foxora GmbH."
+        ]
+      },
+      {
+        "title": "Aufsichts­behörde",
+        "lines": [
+          "Bezirkshauptmannschaft Klagenfurt-Land",
+          "Foxora ist kein konzessions­pflichtiges Finanzprodukt. Mitglieds­gebühren werden als Loyalty-Membership erfasst."
+        ]
+      },
+      {
+        "title": "Streit­beilegung",
+        "lines": [
+          "Die EU-Kommission stellt eine Plattform zur Online-Streit­beilegung bereit: https://ec.europa.eu/consumers/odr",
+          "Wir sind nicht bereit oder verpflichtet, an Streit­beilegungs­verfahren vor einer Verbraucher­schlichtungs­stelle teilzunehmen."
+        ]
+      },
+      {
+        "title": "Haftung für Inhalte",
+        "lines": [
+          "Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität wird keine Gewähr übernommen.",
+          "Aussagen zur Geschäftsstruktur beschreiben den geplanten Endzustand des Foxora-Start-Kits — siehe Roadmap für den jeweiligen Umsetzungs­stand."
+        ]
+      }
+    ],
+    "placeholderNote": "Hinweis: Adress- und Firmen­buch­daten werden mit Eintragung der Foxora GmbH ergänzt."
+  },
+  "datenschutz": {
+    "kicker": "Datenschutz",
+    "title": "Wie wir Daten behandeln.",
+    "lead": "Datenschutz­erklärung gemäß Art. 13 DSGVO. Wir sammeln so wenig wie möglich und so viel wie nötig — und sagen offen, was wir tun.",
+    "sections": [
+      {
+        "title": "Verantwortlich",
+        "body": "Foxora GmbH (in Gründung), Musterstraße 1, 9020 Klagenfurt, Österreich. Kontakt: hello@foxora.io."
+      },
+      {
+        "title": "Zwecke der Verarbeitung",
+        "body": "Betrieb der Website, Beantwortung von Kontakt­anfragen, Betrieb des Loyalty-Programms (sobald aktiv) sowie Erfüllung gesetzlicher Aufbewahrungs­pflichten."
+      },
+      {
+        "title": "Kontakt­formular",
+        "body": "Wenn du uns über das Formular schreibst, verarbeiten wir Name, E-Mail, Thema und Nachricht ausschließlich zur Beantwortung deiner Anfrage. Rechts­grundlage: Art. 6 Abs. 1 lit. b und f DSGVO. Versand erfolgt über Resend (resend.com) mit Servern in der EU. Speicherdauer: maximal 24 Monate nach letztem Kontakt."
+      },
+      {
+        "title": "Server-Logs",
+        "body": "Beim Aufruf der Website verarbeitet unser Hoster (Vercel Inc., USA) automatisch IP-Adresse, Zeitpunkt, Pfad und User-Agent für 30 Tage zur Abwehr von Missbrauch. Rechts­grundlage: Art. 6 Abs. 1 lit. f DSGVO. Es besteht ein DPA mit Standard­vertrags­klauseln."
+      },
+      {
+        "title": "KI-Chat („Mit Foxora reden\")",
+        "body": "Eingaben im Chat werden zur Antwort­generierung an Anthropic (USA, EU-Modelle) übermittelt. Es werden keine Identifier oder Cookies mit­gesendet. Verarbeitungs­grundlage: Art. 6 Abs. 1 lit. f DSGVO. Bitte keine sensiblen oder personen­bezogenen Daten im Chat eingeben."
+      },
+      {
+        "title": "Cookies",
+        "body": "Wir setzen ausschließlich technisch notwendige Cookies: Sprach­präferenz und Theme. Keine Tracking-Cookies, kein Analytics ohne deine Einwilligung."
+      },
+      {
+        "title": "Deine Rechte",
+        "body": "Auskunft, Berichtigung, Löschung, Einschränkung, Daten­übertrag­barkeit und Wider­spruch (Art. 15–22 DSGVO). Beschwerden bei der Österreichischen Daten­schutz­behörde (dsb.gv.at)."
+      },
+      {
+        "title": "Änderungen",
+        "body": "Wir passen diese Erklärung an neue Funktionen oder Gesetzes­änderungen an. Stand: Juni 2026."
+      }
+    ]
   }
 }

@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { CashbackCalculator } from "@/components/cashback/cashback-calculator";
+import { Reveal } from "@/components/reveal";
 import { useI18n } from "@/lib/i18n/provider";
 
 export function Modell() {
@@ -23,42 +24,49 @@ export function Modell() {
     <>
       <section className="foxora-gradient relative overflow-hidden">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 pb-20 pt-24 sm:pt-32">
-          <Badge variant="coral" className="w-fit px-4 py-1.5">
-            {m.kicker}
-          </Badge>
-          <h1 className="hero-display text-balance text-5xl text-foreground sm:text-7xl md:text-8xl">
-            {m.title.split("\n").map((line, i) => (
-              <span key={i} className="block">
-                {line}
-              </span>
-            ))}
-          </h1>
-          <p className="max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            {m.lead}
-          </p>
+          <Reveal>
+            <Badge variant="coral" className="w-fit px-4 py-1.5">
+              {m.kicker}
+            </Badge>
+          </Reveal>
+          <Reveal delayMs={80}>
+            <h1 className="hero-display text-balance text-5xl text-foreground sm:text-7xl md:text-8xl">
+              {m.title.split("\n").map((line, i) => (
+                <span key={i} className="block">
+                  {line}
+                </span>
+              ))}
+            </h1>
+          </Reveal>
+          <Reveal delayMs={160}>
+            <p className="max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
+              {m.lead}
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-6 py-24 sm:py-32">
-        <h2 className="hero-display mb-12 text-3xl text-foreground sm:text-5xl">
-          {m.stepsTitle}
-        </h2>
+        <Reveal>
+          <h2 className="hero-display mb-12 text-3xl text-foreground sm:text-5xl">
+            {m.stepsTitle}
+          </h2>
+        </Reveal>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {m.steps.map((s) => (
-            <div
-              key={s.step}
-              className="flex flex-col gap-3 rounded-3xl border border-border bg-card p-8 shadow-apple"
-            >
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
-                {s.step}
-              </span>
-              <h3 className="text-2xl font-semibold tracking-tight">
-                {s.title}
-              </h3>
-              <p className="text-pretty leading-relaxed text-muted-foreground">
-                {s.body}
-              </p>
-            </div>
+          {m.steps.map((s, i) => (
+            <Reveal key={s.step} delayMs={i * 100}>
+              <div className="flex h-full flex-col gap-3 rounded-3xl border border-border bg-card p-8 shadow-apple">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                  {s.step}
+                </span>
+                <h3 className="text-2xl font-semibold tracking-tight">
+                  {s.title}
+                </h3>
+                <p className="text-pretty leading-relaxed text-muted-foreground">
+                  {s.body}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </section>

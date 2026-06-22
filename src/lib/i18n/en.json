@@ -330,5 +330,110 @@
     "legal": "© 2026 Foxora GmbH · Klagenfurt + Foxora FZ-LLC · Dubai",
     "impressum": "Imprint",
     "datenschutz": "Privacy"
+  },
+  "impressum": {
+    "kicker": "Imprint",
+    "title": "Disclosure & provider identification",
+    "lead": "Information pursuant to § 5 ECG, § 14 UGB, and § 24 MedienG (Austria), and § 5 TMG (Germany).",
+    "sections": [
+      {
+        "title": "Provider",
+        "lines": [
+          "Foxora GmbH (in formation)",
+          "Musterstraße 1",
+          "9020 Klagenfurt am Wörthersee",
+          "Austria"
+        ]
+      },
+      {
+        "title": "Contact",
+        "lines": [
+          "Email: hello@foxora.io",
+          "Web: https://foxora.io"
+        ]
+      },
+      {
+        "title": "Authorised representatives",
+        "lines": [
+          "Management: to be appointed",
+          "Companies register: filing with the Klagenfurt Regional Court in progress"
+        ]
+      },
+      {
+        "title": "Business purpose",
+        "lines": [
+          "Operation of a premium loyalty programme, including the associated software and platform services."
+        ]
+      },
+      {
+        "title": "Sister entity",
+        "lines": [
+          "Foxora FZ-LLC (in formation)",
+          "DMCC / IFZA, Dubai, United Arab Emirates",
+          "Runs app operations and international distribution under an IP licence agreement with Foxora GmbH."
+        ]
+      },
+      {
+        "title": "Supervisory authority",
+        "lines": [
+          "Bezirkshauptmannschaft Klagenfurt-Land",
+          "Foxora is not a financial product requiring authorisation. Membership fees are booked as loyalty membership revenue."
+        ]
+      },
+      {
+        "title": "Dispute resolution",
+        "lines": [
+          "The EU Commission provides an online dispute resolution platform: https://ec.europa.eu/consumers/odr",
+          "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+        ]
+      },
+      {
+        "title": "Liability for content",
+        "lines": [
+          "Content on this site was prepared with the greatest care. No guarantee is given for accuracy, completeness, or timeliness.",
+          "Statements about the corporate structure describe the planned end state of the Foxora Start Kit — see the roadmap for the current build status."
+        ]
+      }
+    ],
+    "placeholderNote": "Note: Address and companies-register details will be filled in once Foxora GmbH is incorporated."
+  },
+  "datenschutz": {
+    "kicker": "Privacy",
+    "title": "How we handle data.",
+    "lead": "Privacy notice pursuant to Art. 13 GDPR. We collect as little as possible, only what we need, and we say openly what we do.",
+    "sections": [
+      {
+        "title": "Controller",
+        "body": "Foxora GmbH (in formation), Musterstraße 1, 9020 Klagenfurt, Austria. Contact: hello@foxora.io."
+      },
+      {
+        "title": "Purposes of processing",
+        "body": "Operation of the website, response to contact requests, operation of the loyalty programme (once live), and fulfilment of statutory retention obligations."
+      },
+      {
+        "title": "Contact form",
+        "body": "If you reach out through the form, we process your name, email, topic, and message solely to respond to your request. Legal basis: Art. 6(1)(b) and (f) GDPR. Delivery is handled by Resend (resend.com) with servers in the EU. Retention: maximum 24 months after last contact."
+      },
+      {
+        "title": "Server logs",
+        "body": "When you visit the site, our host (Vercel Inc., USA) automatically processes IP address, timestamp, path, and user agent for 30 days to protect against abuse. Legal basis: Art. 6(1)(f) GDPR. A DPA with Standard Contractual Clauses is in place."
+      },
+      {
+        "title": "AI chat (\"Talk to Foxora\")",
+        "body": "Chat inputs are forwarded to Anthropic (USA, EU models) for response generation. No identifiers or cookies are sent. Legal basis: Art. 6(1)(f) GDPR. Please do not enter sensitive or personal data in the chat."
+      },
+      {
+        "title": "Cookies",
+        "body": "We only use technically necessary cookies: language preference and theme. No tracking cookies, no analytics without your consent."
+      },
+      {
+        "title": "Your rights",
+        "body": "Access, rectification, erasure, restriction, data portability, and objection (Art. 15–22 GDPR). Complaints can be filed with the Austrian Data Protection Authority (dsb.gv.at)."
+      },
+      {
+        "title": "Changes",
+        "body": "We adapt this notice to new features or legal changes. Last updated: June 2026."
+      }
+    ]
   }
 }

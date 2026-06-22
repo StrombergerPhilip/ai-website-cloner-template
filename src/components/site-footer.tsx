@@ -56,6 +56,20 @@ export function SiteFooter() {
               {t("nav.kontakt")}
             </Link>
           </div>
+          <div className="flex gap-4 text-xs">
+            <Link
+              href="/impressum"
+              className="transition-colors hover:text-foreground"
+            >
+              {t("footer.impressum")}
+            </Link>
+            <Link
+              href="/datenschutz"
+              className="transition-colors hover:text-foreground"
+            >
+              {t("footer.datenschutz")}
+            </Link>
+          </div>
           <p className="text-xs">{t("footer.legal")}</p>
         </div>
       </div>
