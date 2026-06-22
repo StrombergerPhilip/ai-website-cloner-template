@@ -3,6 +3,7 @@
     "modell": "Modell",
     "struktur": "Struktur",
     "roadmap": "Roadmap",
+    "manifesto": "Manifest",
     "kontakt": "Kontakt",
     "talkToFoxora": "Mit Foxora reden",
     "openMenu": "Menü öffnen",
@@ -237,6 +238,47 @@
         ]
       }
     ]
+  },
+  "manifesto": {
+    "kicker": "Foxora-Manifest",
+    "title": "Loyalty wie es immer\nhätte sein sollen.",
+    "lead": "Wir bauen Foxora für Menschen, die genug haben von Token-Versprechen, undurchsichtigen Renditen und Programmen, die mehr von ihren Mitgliedern nehmen als geben. Das ist unser Manifest — sechs Sätze, an denen wir uns messen lassen.",
+    "tenets": [
+      {
+        "number": "01",
+        "title": "Der Cap ist heilig.",
+        "body": "100 % deiner Aktivierung. Keinen Cent mehr. Keine Bonus-Stufen, keine Sonderaktionen, keine „erweiterten Tiers\". Wenn der Cap erreicht ist, ist er erreicht — und die Mathematik dahinter ist offen einsehbar."
+      },
+      {
+        "number": "02",
+        "title": "Eine Membership, kein Investment.",
+        "body": "Wer €250 zahlt, kauft Zugang zu Premium-Konditionen — wie bei Costco, wie bei AmEx Platinum. Keine in Aussicht gestellte Rendite, keine Beteiligung, kein Wertpapier. Wir nennen es nicht so, wir behandeln es nicht so."
+      },
+      {
+        "number": "03",
+        "title": "Saubere Strukturen, dokumentiert.",
+        "body": "AT GmbH für Marke und IP. Dubai FZ-LLC für globale App-Operations. Ein dokumentierter IP-Lizenzvertrag dazwischen, fremdvergleichskonform. Jeder Euro hat einen Beleg, jede Entscheidung einen Aktenvermerk."
+      },
+      {
+        "number": "04",
+        "title": "Kein Crypto im Kunden­geschäft.",
+        "body": "Mitglieder zahlen in EUR, halten in EUR, bekommen in EUR. Die einzige Berührung mit BTC ist der Treasury-Hedge der Gesellschaften gegen Inflation — das ist Bilanz-Politik, kein Produkt."
+      },
+      {
+        "number": "05",
+        "title": "Partner verdienen, nicht Foxora.",
+        "body": "Der größte Teil des Spends fließt an die Partner-Unternehmen, die das Erlebnis liefern. Unsere Marge kommt aus Membership-Volumen und SaaS-Tools — nicht aus aufgeblähten Cashback-Konditionen, die niemand erfüllen kann."
+      },
+      {
+        "number": "06",
+        "title": "180 Tage. Dann reden Zahlen.",
+        "body": "Wir versprechen nichts für 2030. Wir bauen ein Programm, das nach 180 Tagen einen Audit-Trail hat — Mitglieder, Partner, Cashback-Flows, Bilanz. Wer mit uns startet, sieht das Ergebnis, nicht den Pitch."
+      }
+    ],
+    "closingTitle": "Wenn du das unterschreiben kannst, gehörst du dazu.",
+    "closingLead": "Foxora ist kein Versprechen auf die Zukunft. Es ist eine Wette auf saubere Arbeit, dokumentierte Strukturen und ein Modell, das man auf der Rückseite eines Bierdeckels erklären kann.",
+    "ctaPrimary": "Modell ansehen",
+    "ctaSecondary": "Mit Foxora reden"
   },
   "kontakt": {
     "kicker": "Kontakt",

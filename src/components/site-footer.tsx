@@ -44,6 +44,12 @@ export function SiteFooter() {
               {t("nav.roadmap")}
             </Link>
             <Link
+              href="/manifesto"
+              className="transition-colors hover:text-foreground"
+            >
+              {t("nav.manifesto")}
+            </Link>
+            <Link
               href="/kontakt"
               className="transition-colors hover:text-foreground"
             >

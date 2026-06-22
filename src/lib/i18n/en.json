@@ -3,6 +3,7 @@
     "modell": "Model",
     "struktur": "Structure",
     "roadmap": "Roadmap",
+    "manifesto": "Manifesto",
     "kontakt": "Contact",
     "talkToFoxora": "Talk to Foxora",
     "openMenu": "Open menu",
@@ -237,6 +238,47 @@
         ]
       }
     ]
+  },
+  "manifesto": {
+    "kicker": "The Foxora Manifesto",
+    "title": "Loyalty the way it\nshould have been.",
+    "lead": "We're building Foxora for people who are done with token promises, opaque returns, and programs that take more from their members than they give. This is our manifesto — six sentences we want to be measured against.",
+    "tenets": [
+      {
+        "number": "01",
+        "title": "The cap is sacred.",
+        "body": "100% of your activation. Not a cent more. No bonus tiers, no special promotions, no \"extended levels\". When the cap is reached, it's reached — and the math behind it is open for anyone to inspect."
+      },
+      {
+        "number": "02",
+        "title": "A membership, not an investment.",
+        "body": "Pay €250 and you're buying access to premium conditions — like Costco, like AmEx Platinum. No projected returns, no equity, no security. We don't call it that, we don't treat it that way."
+      },
+      {
+        "number": "03",
+        "title": "Clean structures, on the record.",
+        "body": "AT GmbH for brand and IP. Dubai FZ-LLC for global app operations. An arms-length IP license contract between them. Every euro has a receipt, every decision a memo."
+      },
+      {
+        "number": "04",
+        "title": "No crypto in the member journey.",
+        "body": "Members pay in EUR, hold in EUR, get paid in EUR. The only contact with BTC is the corporate treasury hedge against inflation — that's balance-sheet hygiene, not a product."
+      },
+      {
+        "number": "05",
+        "title": "Partners earn, not Foxora.",
+        "body": "The lion's share of spend flows to the partner businesses that deliver the experience. Our margin comes from membership volume and SaaS tools — not from inflated cashback terms no one can sustain."
+      },
+      {
+        "number": "06",
+        "title": "180 days. Then numbers speak.",
+        "body": "We're not promising anything for 2030. We're building a program that, after 180 days, has an audit trail — members, partners, cashback flows, balance sheet. People who start with us see the outcome, not the pitch."
+      }
+    ],
+    "closingTitle": "If you can sign this, you're one of us.",
+    "closingLead": "Foxora isn't a promise about the future. It's a bet on clean work, documented structures, and a model you can explain on the back of a coaster.",
+    "ctaPrimary": "See the model",
+    "ctaSecondary": "Talk to Foxora"
   },
   "kontakt": {
     "kicker": "Contact",

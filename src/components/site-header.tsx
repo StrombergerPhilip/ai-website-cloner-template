@@ -20,6 +20,7 @@ export function SiteHeader() {
     { href: "/modell", label: t("nav.modell") },
     { href: "/struktur", label: t("nav.struktur") },
     { href: "/roadmap", label: t("nav.roadmap") },
+    { href: "/manifesto", label: t("nav.manifesto") },
     { href: "/kontakt", label: t("nav.kontakt") },
   ];
 
