@@ -169,3 +169,5 @@ Each script regenerates the platform-specific copies automatically. Agents that 
 ## License
 
 MIT
+
+https://github.com/CodAr-man/ai-website-cloner-template/blob/fix-gemini-toml-validation/.gemini%2Fcommands%2Fclone-website.toml
